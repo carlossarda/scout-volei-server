@@ -16,7 +16,7 @@ const client = new MongoClient(url);
 
 export class Mongo {
 
-    conexaoDb(){
+    conexaoDb() {
         return client;
 
     }
