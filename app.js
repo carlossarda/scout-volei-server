@@ -7,6 +7,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var jogosController = require('./app/controllers/JogoController');
 var campeonatoController = require('./app/controllers/CampeonatoController');
+var authCodeController= require('./app/controllers/AuthCodeController');
 
 var app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/jogos', jogosController);
-app.use('/campeonatos',campeonatoController)
+app.use('/campeonatos',campeonatoController);
+app.use('/login', authCodeController);
 
 module.exports = app;
